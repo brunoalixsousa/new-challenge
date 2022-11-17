@@ -40,8 +40,9 @@ header p{
 }
 /*--------stars-------*/
 .starscontainer{
+
   display: flex;
-  flex-direction: collum;
+  flex-direction: column;
   align-items: center;
   margin-bottom:30px;
 }
@@ -63,7 +64,7 @@ header p{
   font-weight: 700;
   color: hsl(300, 43%, 22%);
   display: flex;
-  flex-direction: collum;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
@@ -83,8 +84,16 @@ header p{
   grid-template-columns: 1fr 10fr;
   
 }
+.cardscontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+
+}
 .cards img{
-  border: radius 50%;
+  border-radius:  50%;
   width: 50px;
   margin-right: 20px;
   grid-column: 1 / 2;
@@ -96,8 +105,14 @@ header p{
 }
 .cards .status{
   color: hsl(333, 80%, 67%);
-  grid-column: 1 / 3;
+  grid-column: 2 / 3;
   
+}
+.cards p{
+  font-weight: 500;
+  line-height: 20px;
+  grid-column: 1 / 3;
+  margin-top: 30px;
 }
 
 /*------------foooter-------*/
@@ -109,4 +124,30 @@ header p{
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+/*------------(>375px)------------*/
+
+@media only screen and (min-width: 376px) {
+  .starscontainer{
+    padding: 0 25px;
+  }
+  .star1{
+    align-self: flex-start;
+  }
+  .star3{
+    align-self: flex-end;
+  }
+  .cardscontainer{
+    padding: 0 14px;
+  }
+   .card1{
+    align-self: flex-start;
+
+   }
+    
+    
+    .card3{
+      align-self: flex-end;
+    }
+  
 }
